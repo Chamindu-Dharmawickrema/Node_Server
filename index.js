@@ -43,4 +43,19 @@ createServer(async (req, res) => {
             fileReadPool.terminate();
         }
     }
+    else if (req.url==='/contact'){
+         res.writeHead(200, "Content-type:text/html");
+
+        // worker name and pass the html file
+        //read the file and send it
+        try {
+            const result = await fileReadPool.exec("html", ["contact.html"]);
+            res.end(result);
+        } catch (err) {
+            log(err);
+            res.end(err);
+        } finally {
+            fileReadPool.terminate();
+        }
+    }
 }).listen(PORT, () => log("server running..."));
