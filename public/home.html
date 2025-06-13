@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Chamindu Dharmawickrama</title>
+  <style>
+    :root {
+      --primary-color: #0d47a1;
+      --accent-color: #64b5f6;
+      --bg-light: #f4f7fa;
+      --bg-white: #ffffff;
+      --text-dark: #2e2e2e;
+      --text-muted: #666;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #f0f0f0;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .hero-content a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .hero-content a:hover {
+      background: #2196f3;
+    }
+
+    .intro {
+      max-width: 960px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .intro h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .hero-content h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <h1>Hello, I'm Chamindu</h1>
+      <p>A passionate Software Engineer focused on creating beautiful, user-friendly web experiences.</p>
+      <a href="/about">Learn More About Me</a>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>Welcome to My Portfolio</h2>
+    <p>
+      I specialize in building full-stack web applications with technologies like React, Next.js, Node.js, and MongoDB. This space showcases my work, journey, and what I love to create. Dive in to learn more!
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Chamindu Dharmawickrama · All rights reserved.
+  </footer>
+</body>
+</html>
